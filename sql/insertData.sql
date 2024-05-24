@@ -8,3 +8,8 @@ INSERT INTO books (name, pages, created_at, updated_at, author_id) VALUES
 ('Jogos Vorazes', 276, NOW(), NOW(), NULL),
 ('One Piece - Volume 1', 120, NOW(), NOW(), NULL),
 ('One Piece - Volume 2', 137, NOW(), NOW(), NULL) RETURNING *;
+
+INSERT INTO categories (name, created_at, updated_at) VALUES 
+('Mangá', NOW(), NOW()),
+('Aventura', NOW(), NOW()),
+('Fantasia', NOW(), NOW()) RETURNING *;
