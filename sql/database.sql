@@ -15,3 +15,10 @@ CREATE TABLE contact_infos (
     "created_at" TIMESTAMP DEFAULT NOW(),
     "updated_at" TIMESTAMP
 );
+
+CREATE TABLE categories (
+    "id" SERIAL PRIMARY KEY,
+    "name" VARCHAR(50) NOT NULL,
+    "created_at" TIMESTAMP DEFAULT NOW(),
+    "updated_at" TIMESTAMP
+);
