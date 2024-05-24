@@ -22,3 +22,13 @@ CREATE TABLE categories (
     "created_at" TIMESTAMP DEFAULT NOW(),
     "updated_at" TIMESTAMP
 );
+
+CREATE TABLE books (
+    "id" SERIAL PRIMARY KEY,
+    "name" VARCHAR(200) NOT NULL,
+    "pages" INTEGER NOT NULL,
+    "created_at" TIMESTAMP DEFAULT NOW(),
+    "updated_at" TIMESTAMP DEFAULT NOW(),
+    "author_id" INTEGER,
+    FOREIGN KEY (author_id) REFERENCES authors(id) ON DELETE SET NULL
+);
