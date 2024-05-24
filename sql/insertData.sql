@@ -13,3 +13,8 @@ INSERT INTO categories (name, created_at, updated_at) VALUES
 ('Mangá', NOW(), NOW()),
 ('Aventura', NOW(), NOW()),
 ('Fantasia', NOW(), NOW()) RETURNING *;
+
+INSERT INTO books_categories (book_id, category_id) VALUES 
+(1, 2), (2, 2), (3, 2), (4, 2),
+(1, 3), (3, 3), (4, 3),
+(3, 1), (4, 1);
