@@ -32,3 +32,11 @@ CREATE TABLE books (
     "author_id" INTEGER,
     FOREIGN KEY (author_id) REFERENCES authors(id) ON DELETE SET NULL
 );
+
+CREATE TABLE books_categories (
+    "book_id" INTEGER,
+    "category_id" INTEGER,
+    PRIMARY KEY (book_id, category_id),
+    FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE,
+    FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
+);
